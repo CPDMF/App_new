@@ -1,0 +1,10 @@
+{
+  "name": "App_CPDMF_Third",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

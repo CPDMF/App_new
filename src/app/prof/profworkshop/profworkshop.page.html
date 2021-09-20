@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Workshop</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-button color="danger" (click)="scanBRcode()" expand="block">
+        Scan Barcode
+    </ion-button>
+</ion-card>
+
+<ion-card>
+    <div *ngIf="scannedBarcode">
+        <ion-item>
+            Scanned code output: <strong>{{ scannedBarcode["text"] }}</strong>
+        </ion-item>
+        <!-- <ion-item>
+            Scanned code output: <strong>{{ scannedBarcode["format"] }}</strong>
+        </ion-item> -->
+    </div>
+</ion-card>
+<ion-card>
+  <h3>Generate New QR Code</h3>
+  <ion-input placeholder="Enter Input" [(ngModel)]="encodedData"></ion-input>
+
+  <ion-button color="primary" (click)="generateBarCode()" expand="block">
+    QR Code Create
+  </ion-button>
+</ion-card>
+</ion-content>
