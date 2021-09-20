@@ -22,6 +22,6 @@ export class AccessProvider{
             headers: headers
         };
         console.log('right');
-        return this.http.post( 'http://localhost/ionic-api/' + file,JSON.stringify(body),options).timeout(5000).map(res=>res);
+        return this.http.post( 'https://192.168.1.2/ionic-api/' + file,JSON.stringify(body),options).timeout(5000).map(res=>res);
     }
 }

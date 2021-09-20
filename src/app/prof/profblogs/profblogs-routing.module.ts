@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ProfblogsPage
+  },
+  {
+    path: 'myblogs',
+    loadChildren: () => import('./myblogs/myblogs.module').then( m => m.MyblogsPageModule)
   }
 ];
 

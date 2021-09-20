@@ -94,8 +94,7 @@
       }
     },
     "platforms": [
-      "android",
-      "windows"
+      "android"
     ]
   }
 }

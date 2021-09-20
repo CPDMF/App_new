@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ProfcoursesPage
+  },
+  {
+    path: 'mycourses',
+    loadChildren: () => import('./mycourses/mycourses.module').then( m => m.MycoursesPageModule)
   }
 ];
 
