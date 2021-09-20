@@ -23,6 +23,31 @@
         <!-- <ion-item>
             Scanned code output: <strong>{{ scannedBarcode["format"] }}</strong>
         </ion-item> -->
+        <ion-item>
+          Member Id : <ion-input type="text" [(ngModel)]="memberid"></ion-input>
+          
+        </ion-item>
+        <ion-item>
+          <ion-list>
+            <ion-radio-group value="biff">
+              <ion-list-header>
+                <ion-label>Role</ion-label>
+              </ion-list-header>
+          
+              <ion-item>
+                <ion-label>Conduct Member </ion-label>
+                <ion-radio slot="start" value="biff"></ion-radio>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Participant</ion-label>
+                <ion-radio slot="start" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+          <!-- [(ngModel)]="memberid" -->
+        </ion-item>
+
     </div>
 </ion-card>
 <ion-card>
