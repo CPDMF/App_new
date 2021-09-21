@@ -27,7 +27,7 @@
           Member Id : <ion-input type="text" [(ngModel)]="memberid"></ion-input>
           
         </ion-item>
-        <ion-item>
+        <!-- <ion-item>
           <ion-list>
             <ion-radio-group value="biff">
               <ion-list-header>
@@ -45,10 +45,19 @@
               </ion-item>
             </ion-radio-group>
           </ion-list>
-          <!-- [(ngModel)]="memberid" -->
-        </ion-item>
-
+           [(ngModel)]="memberid" -->
+        <!--</ion-item>  -->
+        <ion-item>
+          <ion-button color="success" (click)="tryWorshop()" expand="block">Update Credit</ion-button>
+        </ion-item>   
     </div>
+    <!-- <ion-item>
+      Member Id : <ion-input type="text" [(ngModel)]="memberid"></ion-input>
+      
+    </ion-item>  
+    <ion-item>
+      <ion-button color="success" (click)="tryWorshop()" expand="block">Update Credit</ion-button>
+    </ion-item>  -->
 </ion-card>
 <!-- <ion-card>
   <h3>Generate New QR Code</h3>

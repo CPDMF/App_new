@@ -49,6 +49,7 @@ export class LoginPage implements OnInit {
           username: this.username,
           password: this.password
         };
+        //this.presentToast(body.username);
         this.accessproviders.postData(body,'api.php').subscribe((res: any)=>{
            if(res.success===true){
             // loading.dismiss();

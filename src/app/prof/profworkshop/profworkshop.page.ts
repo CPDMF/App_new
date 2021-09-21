@@ -42,39 +42,40 @@ export class ProfworkshopPage implements OnInit {
     return new Promise(resolve=>{
       const body = {
         //action: 'login_progress',
-        workshopid: this.scannedBarcode,
-        //memberid: this.memberid
-      };
-      this.accessproviders.postData(body,'workshop.php').subscribe((res: any)=>{
-        // eslint-disable-next-line @typescript-eslint/dot-notation
-        if(res.success===true && res.reult['member']===this.memberid){
-          // eslint-disable-next-line @typescript-eslint/dot-notation
-          //this.presentToast(res.result['conductmember']);
-          this.updateCredit();
-        }
-
-      });
-    });
-   }
-   async updateCredit(){
-
-    return new Promise(resolve=>{
-      const body = {
-        //action: 'login_progress',
-        workshopid: this.scannedBarcode,
+        // workshopid: '1001' ,
+        workshopid: this.scannedBarcode.text ,
         memberid: this.memberid
       };
-      this.accessproviders.postData(body,'updateCredit.php').subscribe((res: any)=>{
+      //this.presentToast(body.workshopid);
+      this.accessproviders.postData(body,'worshop.php').subscribe((res: any)=>{
         // eslint-disable-next-line @typescript-eslint/dot-notation
         if(res.success===true){
           // eslint-disable-next-line @typescript-eslint/dot-notation
           //this.presentToast(res.result['conductmember']);
-          this.presentToast('Successfully Updated!');
+          this.presentToast('Update Successfully');
         }
       });
     });
-
    }
+  //  async updateCredit(){
+
+  //   return new Promise(resolve=>{
+  //     const body = {
+  //       //action: 'login_progress',
+  //       workshopid: this.scannedBarcode,
+  //       memberid: this.memberid
+  //     };
+  //     this.accessproviders.postData(body,'updateCredit.php').subscribe((res: any)=>{
+  //       // eslint-disable-next-line @typescript-eslint/dot-notation
+  //       if(res.success===true){
+  //         // eslint-disable-next-line @typescript-eslint/dot-notation
+  //         //this.presentToast(res.result['conductmember']);
+  //         this.presentToast('Successfully Updated!');
+  //       }
+  //     });
+  //   });
+
+   //}
    async presentToast(a){
       const toast=await this.toasctrl.create({
         message: a,
