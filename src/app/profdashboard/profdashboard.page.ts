@@ -11,6 +11,8 @@ import { AccessProvider } from '../providers/access-providers';
 export class ProfdashboardPage implements OnInit {
    credit: '';
    membercredit: '';
+   memcredit2: '';
+   pendingcredit: '';
   constructor(
     private router: Router,
     private toasctrl: ToastController,
@@ -31,9 +33,11 @@ export class ProfdashboardPage implements OnInit {
       //this.presentToast(body.username);
       this.accessproviders.postData(body,'credit.php').subscribe((res: any)=>{
          if(res.success===true){
-           this.membercredit=res.result.membercredit
+           this.membercredit=res.result.membercredit;
            //this.presentToast(res.result.membercredit);
            this.credit=res.result.memcredit;
+          this.memcredit2=res.result.membercredit2;
+          this.pendingcredit=res.result.pendingcredit;
           // loading.dismiss();
           // this.disabledbutton=false;
           //this.presentToast(res.result['membertype']);

@@ -9,9 +9,24 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-card>
-    {{credit}}
-  </ion-card> -->
+
+  <ion-card style="width: 45%;">
+    <ion-card-header>
+      <!-- <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle> -->
+      <ion-card-title style="color: rgb(70, 70, 167);">Credits</ion-card-title>
+    </ion-card-header>
+    <h2 style="color: black; margin-left: 25px; color: rgb(0, 0, 255);"><strong>{{credit}}</strong></h2>
+  </ion-card>
+
+
+  <ion-card style="width: 45%; margin-top: -125px; margin-left: 200px;">
+    <ion-card-header>
+       <ion-card-title style="color: rgb(233, 86, 86);">Pending Credits</ion-card-title>
+    </ion-card-header>
+    <h2 style="color: black; margin-left: 25px; color: red;"><strong>{{pendingcredit}}</strong></h2>
+  </ion-card> 
+
+
   <ion-card class="welcome-card">
     <ion-card-header>
       <!-- <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle> -->
@@ -19,9 +34,11 @@
     </ion-card-header>
     <ion-card-content>
       <ion-progress-bar value="{{membercredit}}" color="success"></ion-progress-bar>
-      <ion-card-subtitle>{{credit}} of 30 credit complete</ion-card-subtitle>
+      <ion-card-subtitle>{{memcredit2}}% Completed</ion-card-subtitle>
     </ion-card-content>
   </ion-card>
+
+
   <ion-card class="welcome-card" style="background-color:#4c8dff ;">
     <ion-card-header>
       <!-- <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle> -->
@@ -30,6 +47,8 @@
     <ion-card-content>
     </ion-card-content>
   </ion-card>
+
+
   <ion-card class="welcome-card">
     <ion-card-header>
       <!-- <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle> -->
