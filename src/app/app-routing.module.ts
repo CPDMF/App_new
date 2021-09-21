@@ -51,6 +51,11 @@ const routes: Routes = [
     path: 'profworkshop',
     loadChildren: () => import('./prof/profworkshop/profworkshop.module').then( m => m.ProfworkshopPageModule)
   },
+  {
+    path: 'addblogs',
+    loadChildren: () => import('./prof/addblogs/addblogs.module').then( m => m.AddblogsPageModule)
+  },
+  
 ];
 
 @NgModule({

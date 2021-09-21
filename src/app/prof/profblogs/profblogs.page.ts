@@ -6,24 +6,24 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./profblogs.page.scss'],
 })
 export class ProfblogsPage implements OnInit {
-  blogs: any=[];
+  public blogs=[];
   constructor(
-    public _apiService: ApiService
+    public apiService: ApiService
   ) {
-    this.getBlogs();
   }
 
-  getBlogs(){
-    // eslint-disable-next-line no-underscore-dangle
-    this._apiService.getBlogs().subscribe((res: any)=> {
-      console.log('SUCCESS===',res);
-      this.blogs=res;
-    },(error: any)=>{
-      console.log('ERROR==',error);
-    });
-  }
 
   ngOnInit() {
+    this.apiService.getBlogs().subscribe((res: any)=> {
+      console.log('SUCCESS===',res);
+      this.blogs=res;
+        // eslint-disable-next-line @typescript-eslint/dot-notation
+       // this.blogtitle=res['blogtitle'];
+    //   this.blogs=res[0];
+    //   // // eslint-disable-next-line @typescript-eslint/dot-notation
+    //   // this.blogtitle=this.blogs['blogtitle'];
+    // },(error: any)=>{
+    //   console.log('ERROR==',error);
+     });
   }
-
 }

@@ -10,8 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'myblogs',
-    loadChildren: () => import('./myblogs/myblogs.module').then( m => m.MyblogsPageModule)
-  }
+    loadChildren: () => import('../myblogs/myblogs.module').then( m => m.MyblogsPageModule)
+  },
 ];
 
 @NgModule({

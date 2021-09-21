@@ -1,5 +1,7 @@
+import { IBlogs } from './blog';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class ApiService {
     this.headers.append('Access-Control-Allow-Origin','*');
    }
 
-   getBlogs(){
-     return this.http.get('https://192.168.1.2/ionic-api/viewBlogs.php');
+   getBlogs(): Observable<IBlogs[]>{
+     return this.http.get<IBlogs[]>('https://192.168.1.2/ionic-api/viewBlogs.php');
    }
 }

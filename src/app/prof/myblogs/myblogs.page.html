@@ -1,19 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>myblogs</ion-title>
+    <ion-title>My Blogs
+      <ion-button (click)="go()" style="margin-left: 80px;"><ion-icon slot="start" name="add"></ion-icon>NEW BLOG</ion-button>
+    </ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu">
-
       </ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="action-button" style=" margin-top: 60px;">
-    <ion-button><ion-icon slot="start" name="add"></ion-icon>NEW BLOG</ion-button>
-  </div>
-  <h1 style="margin-top: 20px;">My Blog List</h1>
+  <h1 style="margin-top: 60px;">My Blog List</h1>
   <ion-card class="welcome-card">
     <ion-card-header>
       <!-- <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle> -->
