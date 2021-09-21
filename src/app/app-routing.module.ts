@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'addblogs',
     loadChildren: () => import('./prof/addblogs/addblogs.module').then( m => m.AddblogsPageModule)
   },
+  {
+    path: 'payment',
+    loadChildren: () => import('./prof/payment/payment.module').then( m => m.PaymentPageModule)
+  },
   
 ];
 

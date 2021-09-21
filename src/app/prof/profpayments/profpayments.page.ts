@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route,ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profpayments',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfpaymentsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,) { }
+
+  payment(){
+    this.router.navigateByUrl('payment');
+  }
 
   ngOnInit() {
   }
