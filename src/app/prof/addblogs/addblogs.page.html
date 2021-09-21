@@ -11,16 +11,20 @@
 <ion-content>
   <ion-list class="ion-padding">
     <ion-item>
+      <ion-label position="floating">Blog ID : </ion-label>
+      <ion-input type="text" [(ngModel)]="blogId"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label position="floating">Topic : </ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-input type="text" [(ngModel)]="blogtitle"></ion-input>
     </ion-item>
     <br>
     <p>Blog content:</p><br>
     <ion-item>
     <br>
       <br>
-      <textarea name="content" id="content" cols="40" rows="20"></textarea>
+      <textarea name="content" id="content" cols="40" rows="20" [(ngModel)]="content"></textarea>
     </ion-item>
-    <ion-button expand="full" >Create</ion-button>
+    <ion-button expand="full" (click)="blogAdd()" >Create</ion-button>
   </ion-list>
 </ion-content>
