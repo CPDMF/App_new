@@ -1,11 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>SIGN IN
+      <img src="assets/cssl.png" width="20%" style="margin-left: 200px; " />
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div id="header">
+    <br>
     <div class="imgcontainer">
       <img src="assets/login.jpg" class="avatar"/>
     </div> 
@@ -15,10 +18,12 @@
       <ion-label position="floating">Email : </ion-label>
       <ion-input type="email" [(ngModel)]="username"></ion-input>
     </ion-item>
+    <br>
     <ion-item>
       <ion-label position="floating">Password : </ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
+    <br>
     <ion-button expand="full" (click)="tryLogin()">Login</ion-button>
     <span class="psw"><a href="#">Forgot password?</a></span>
     <br/>
